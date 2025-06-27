@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS API Projects</title>
+    <link rel="stylesheet" href="task7_fpl.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- To-Do List -->
+      <section class="card">
+        <h2>📝 To-Do List (with localStorage)</h2>
+        <input type="text" id="taskInput" placeholder="Add a task" />
+        <button id="addTaskButton">Add</button>
+        <ul id="taskList"></ul>
+      </section>
+
+      <!-- Filterable Product List -->
+      <section class="card">
+        <h2>🛍 Filter Products</h2>
+        <input type="text" id="searchInput" placeholder="Search products..." />
+        <ul id="productList"></ul>
+      </section>
+
+      <!-- Movie Search App -->
+      <section class="card">
+        <h2>🎥 Movie Search (OMDb API)</h2>
+        <input
+          type="text"
+          id="movieSearchInput"
+          placeholder="Search movie..."
+        />
+        <button id="searchButton">Search</button>
+        <div id="movieResults"></div>
+      </section>
+    </div>
+
+    <script src="task7_fpl.js"></script>
+  </body>
+</html>

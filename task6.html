@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API FETCH</title>
+    <link rel="stylesheet" href="task6.css" />
+    <!-- <link rel="stylesheet" href="counter.css"> -->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="flex-sections">
+        <div class="section weather-app">
+          <h1>🌤 Weather App</h1>
+          <input type="text" id="cityInput" placeholder="Enter city name..." />
+          <button onclick="getWeather()">Get Weather</button>
+          <div id="weatherResult"></div>
+        </div>
+        <div class="section user-app">
+          <h1>👤 User List</h1>
+          <button onclick="fetchUsers()">Fetch Users</button>
+          <div id="userResult"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="task6.js"></script>
+  </body>
+</html>
