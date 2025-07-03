@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <style>
+      .transition-colors {
+        transition: background-color 0.3s, color 0.3s;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
+    <div id="app" class="grid grid-cols-[auto,1fr] h-screen">
+      <!-- Sidebar -->
+      <aside
+        id="sidebar"
+        class="bg-white dark:bg-gray-800 w-64 p-4 transition-all duration-300 overflow-auto shadow-lg"
+      >
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-bold">Dashboard</h2>
+          <button onclick="toggleSidebar()" class="md:hidden">
+            <svg
+              class="w-6 h-6 text-gray-800 dark:text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+        <nav class="mt-6 space-y-2">
+          <a
+            href="#"
+            class="block px-4 py-2 rounded hover:bg-blue-100 dark:hover:bg-blue-700 transition"
+            >🏠 Home</a
+          >
+          <a
+            href="#"
+            class="block px-4 py-2 rounded hover:bg-blue-100 dark:hover:bg-blue-700 transition"
+            >📊 Reports</a
+          >
+          <a
+            href="#"
+            class="block px-4 py-2 rounded hover:bg-blue-100 dark:hover:bg-blue-700 transition"
+            >⚙️ Settings</a
+          >
+        </nav>
+      </aside>
+
+      <!-- Main Content Area -->
+      <div class="flex flex-col w-full">
+        <!-- Top Navbar -->
+        <header
+          class="flex justify-between items-center px-6 py-4 bg-white dark:bg-gray-800 shadow"
+        >
+          <h1 class="text-2xl font-semibold">Admin Panel</h1>
+          <div class="flex items-center gap-4">
+            <button
+              onclick="toggleDarkMode()"
+              class="text-gray-800 dark:text-white hover:scale-110 transition-transform"
+            >
+              <svg
+                id="theme-icon"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m8.66-13.66l-.7.7M4.34 19.66l-.7-.7M21 12h-1M4 12H3m16.66 4.66l-.7-.7M4.34 4.34l-.7.7"
+                />
+              </svg>
+            </button>
+            <img
+              src="https://i.pravatar.cc/40"
+              alt="User"
+              class="w-10 h-10 rounded-full border hover:ring-2 hover:ring-blue-400 transition"
+            />
+          </div>
+        </header>
+
+        <!-- Scrollable Main Section -->
+        <main class="flex-1 overflow-auto p-6 space-y-6">
+          <section>
+            <h2 class="text-xl font-semibold mb-4">
+              Welcome to the Admin Dashboard 👋
+            </h2>
+
+            <!-- Interactive Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div
+                class="p-4 bg-white dark:bg-gray-800 rounded shadow hover:shadow-lg transition cursor-pointer"
+              >
+                <h3 class="text-lg font-bold mb-2">📈 Analytics</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300">
+                  View traffic, users, and trends.
+                </p>
+              </div>
+              <div
+                class="p-4 bg-white dark:bg-gray-800 rounded shadow hover:shadow-lg transition cursor-pointer"
+              >
+                <h3 class="text-lg font-bold mb-2">📁 Projects</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300">
+                  Manage your current projects here.
+                </p>
+              </div>
+              <div
+                class="p-4 bg-white dark:bg-gray-800 rounded shadow hover:shadow-lg transition cursor-pointer"
+              >
+                <h3 class="text-lg font-bold mb-2">📬 Messages</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300">
+                  Check recent communication and feedback.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- New Section: Stats Overview -->
+          <section>
+            <h2 class="text-xl font-semibold mb-4">📊 Stats Overview</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div
+                class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 p-4 rounded-lg shadow"
+              >
+                <h3 class="text-sm font-semibold">Users</h3>
+                <p class="text-2xl font-bold">1,204</p>
+              </div>
+              <div
+                class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 p-4 rounded-lg shadow"
+              >
+                <h3 class="text-sm font-semibold">Sales</h3>
+                <p class="text-2xl font-bold">$7,650</p>
+              </div>
+              <div
+                class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 p-4 rounded-lg shadow"
+              >
+                <h3 class="text-sm font-semibold">New Orders</h3>
+                <p class="text-2xl font-bold">143</p>
+              </div>
+              <div
+                class="bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 p-4 rounded-lg shadow"
+              >
+                <h3 class="text-sm font-semibold">Tickets</h3>
+                <p class="text-2xl font-bold">18</p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("hidden");
+      }
+
+      function toggleDarkMode() {
+        document.documentElement.classList.toggle("dark");
+        localStorage.setItem(
+          "theme",
+          document.documentElement.classList.contains("dark") ? "dark" : "light"
+        );
+      }
+
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </body>
+</html>
