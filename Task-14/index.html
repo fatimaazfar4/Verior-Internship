@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatima's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind config for animation -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              fadeIn: "fadeIn 1s ease-in-out",
+              slideIn: "slideIn 1s ease-out",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideIn: {
+                "0%": { transform: "translateY(50px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-100 to-purple-200 text-center px-4"
+    >
+      <h1 class="text-5xl font-bold animate-fadeIn">Hi, I'm Fatima</h1>
+      <p class="text-xl mt-4 max-w-xl animate-fadeIn delay-200">
+        A passionate front-end developer creating beautiful, interactive
+        websites with Tailwind CSS.
+      </p>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="py-20 px-6 bg-white">
+      <div class="max-w-3xl mx-auto text-center animate-slideIn">
+        <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+        <p class="text-lg text-gray-600">
+          I'm a developer who loves clean code, smooth animations, and
+          responsive design. I specialize in React and Tailwind CSS, and I'm
+          constantly learning to improve my craft.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20 px-6 bg-gray-50">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-semibold text-center mb-10">My Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Project Card -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-2xl transition duration-300"
+          >
+            <h3 class="text-xl font-bold mb-2">Project One</h3>
+            <p class="text-gray-600">
+              A simple to-do list app built with React and Tailwind.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-2xl transition duration-300"
+          >
+            <h3 class="text-xl font-bold mb-2">Project Two</h3>
+            <p class="text-gray-600">
+              Personal blog layout with animations and responsive design.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-2xl transition duration-300"
+          >
+            <h3 class="text-xl font-bold mb-2">Project Three</h3>
+            <p class="text-gray-600">
+              Portfolio site built with Vite + Tailwind + scroll effects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-6 bg-white">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-4">Let's Connect</h2>
+        <p class="text-gray-600 mb-6">
+          I'm available for freelance work and collaborations. Feel free to get
+          in touch!
+        </p>
+        <a
+          href="mailto:fatima@example.com"
+          class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition hover:bg-blue-700 transform hover:scale-105 duration-300"
+          >Contact Me</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6">
+      <p class="transition duration-300 hover:text-blue-400">
+        &copy; 2025 Fatima Azfar. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
