@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
+<<<<<<< HEAD
 @tailwind utilities;
+=======
+@tailwind utilities;
+
+body {
+  @apply bg-[#2b0a0a] text-white;
+  transition-property: color, background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+>>>>>>> 4c3d2e8 (moviesite)
